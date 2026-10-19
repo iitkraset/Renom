@@ -1,0 +1,73 @@
+{
+  "units": "SI; angles in degrees; all times in seconds from first-stage motor ignition",
+  "site": {
+    "lat_deg": 26.449,
+    "lon_deg": -80.6,
+    "elevation_m_msl": 120.0
+  },
+  "gravity_ms2": 9.80665,
+  "launch": {
+    "rod_tilt_from_vertical_deg": 3.0,
+    "rod_azimuth_deg_cw_from_true_north": 90.0
+  },
+  "magnetic_field": {
+    "total_uT": 45.0,
+    "inclination_deg": 57.5,
+    "declination_deg": -6.0
+  },
+  "sensors": {
+    "accel_range_g": 16,
+    "gyro_range_dps": 2000,
+    "adc_bits": 16,
+    "nominal_rate_hz": {
+      "imu": 100,
+      "baro": 20,
+      "gps": 5,
+      "mag": 50
+    },
+    "mounting": "X = nose axis, right-handed, located at the centre of gravity (no lever arm)"
+  },
+  "rocket": {
+    "stages": 2,
+    "body_diameter_m": 0.102,
+    "ref_area_m2": 0.0081713,
+    "nose": {
+      "shape": "ogive",
+      "length_m": 0.324
+    },
+    "fins_per_stage": 3,
+    "liftoff_mass_kg": 2.793,
+    "structure_mass_kg": {
+      "booster": 0.8296,
+      "sustainer": 1.1266
+    },
+    "staging": "Booster motor burns out, booster separates and the sustainer motor ignites at that same instant."
+  },
+  "motors": [
+    {
+      "stage": 1,
+      "position": "booster",
+      "designation": "I357T-14",
+      "avg_thrust_N": 261,
+      "max_thrust_N": 352,
+      "total_impulse_Ns": 356,
+      "ignition_s": 0.0,
+      "burnout_s": 1.515
+    },
+    {
+      "stage": 2,
+      "position": "sustainer",
+      "designation": "I59WN-P",
+      "avg_thrust_N": 59.5,
+      "max_thrust_N": 172,
+      "total_impulse_Ns": 487,
+      "ignition_s": 1.515,
+      "burnout_s": 10.119
+    }
+  ],
+  "notes": [
+    "burnout_s is the end of thrust including tail-off.",
+    "The rocket leaves the pad shortly after first-stage ignition; the exact liftoff time is not provided.",
+    "structure_mass_kg excludes motors; liftoff_mass_kg includes both motors."
+  ]
+}
